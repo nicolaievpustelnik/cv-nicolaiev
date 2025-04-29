@@ -6,7 +6,7 @@ export default function About() {
   <SplashCursor />
   <div className="about-container">
         <div className="about-image">
-          <img src="/img.jpeg" alt="Foto de Nicolaiev" />
+          <img src={`${process.env.PUBLIC_URL}/img.jpeg`} alt="Foto de Nicolaiev" />
           <h3 className="about-name">Nicolaiev Brito Pustelnik</h3>
         </div>
 
@@ -29,10 +29,10 @@ export default function About() {
             <h3 className="certificates-title">Certificates</h3>
             <div className="certificates-gallery">
             <a href="https://aws.amazon.com/es/certification/certified-cloud-practitioner/" target="_blank" rel="noopener noreferrer">
-              <img src="/aws.png" alt="Certificate 1" className="certificate-img" />
+              <img src={`${process.env.PUBLIC_URL}/aws.png`} alt="Certificate 1" className="certificate-img" />
             </a>
             <a href="https://www.ibm.com/training/certification/ibm-certified-watsonx-generative-ai-engineer-associate-C9007000" target="_blank" rel="noopener noreferrer">
-              <img src="/ibm-ai.png" alt="Certificate 2" className="certificate-img" />
+              <img src={`${process.env.PUBLIC_URL}/ibm-ai.png`} alt="Certificate 2" className="certificate-img" />
             </a>
             </div>
           </div>

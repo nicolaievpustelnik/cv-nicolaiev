@@ -207,9 +207,6 @@ export default function Projects3D() {
   return (
     <section id="projects">
       <h2 className="project-title">Projects & Experience</h2>
-      {/* <h3 className="">
-        Use Effect <span className="arrow-icon">↔</span>
-      </h3> */}
       <div className="project-effect"> Use Effect <span className="arrow-icon">↔</span></div>
 
       <Canvas
