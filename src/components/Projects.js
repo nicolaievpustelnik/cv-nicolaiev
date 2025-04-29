@@ -4,7 +4,7 @@ import { useRef, useEffect, useMemo } from "react";
 import * as THREE from "three";
 
 function RocketModel() {
-  const { scene } = useGLTF("/Rocket.glb");
+  const { scene } = useGLTF(`${process.env.PUBLIC_URL}/Rocket.glb`);
   const modelRef = useRef();
 
   useEffect(() => {
@@ -154,7 +154,7 @@ const projects = [
     title: "IBM",
     description: "Application Developer",
     date: "Mar 2024 - In progress",
-    web: "https://www.accenture.com/ar-es"
+    web: "https://www.ibm.com/account/ar/es/"
   },
 ];
 
