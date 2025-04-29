@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#hero {
+  height: 100vh;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  color: white;
+}
+section {
+  padding: 3rem;
+}
+.project-card {
+  background: #222;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  color: white;
+}
