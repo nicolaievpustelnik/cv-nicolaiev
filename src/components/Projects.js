@@ -19,9 +19,7 @@ function RocketModel() {
           roughness: 0.4,
         });
 
-        if (name.includes("tip")) {
-          material.color = new THREE.Color("#ff4d4d");
-        } else if (name.includes("fin") || name.includes("wing")) {
+        if (name.includes("tip") || name.includes("fin") || name.includes("wing")) {
           material.color = new THREE.Color("#ff4d4d");
         } else if (name.includes("window")) {
           material.color = new THREE.Color("#3399ff");
@@ -46,9 +44,7 @@ function RocketModel() {
     }
   });
 
-  return (
-    <primitive object={scene} ref={modelRef} scale={0.5} position={[0, 0.5, 0]} />
-  );
+  return <primitive object={scene} ref={modelRef} scale={0.5} position={[0, 0.5, 0]} />;
 }
 
 function FireEffect() {
@@ -81,7 +77,6 @@ function FireEffect() {
     const pos = particleGeometry.attributes.position.array;
     for (let i = 0; i < particleCount; i++) {
       pos[i * 3 + 1] += velocity[i * 3 + 1];
-
       if (pos[i * 3 + 1] < -2) {
         pos[i * 3 + 1] = Math.random() * -0.5;
       }
@@ -133,24 +128,28 @@ function StarField() {
 
 const projects = [
   {
+    img: `${process.env.PUBLIC_URL}/corp.jpeg`,
     title: "CorpSolutions",
     description: "Full stack developer",
     date: "Jul 2019 - Jun 2020",
     web: "https://corpsolutions.com.ar/"
   },
   {
+    img: `${process.env.PUBLIC_URL}/banco-comercio.jpeg`,
     title: "Banco de Comercio S.A.",
     description: "Back-end Developer",
     date: "Jun 2020 - Mar 2021",
     web: "https://www.bancodecomercio.com.ar/inicio"
   },
   {
+    img: `${process.env.PUBLIC_URL}/accenture.png`,
     title: "Accenture",
-    description: "full stack engineering specialist",
+    description: "Full stack engineering specialist",
     date: "Apr 2021 - Mar 2024",
     web: "https://www.accenture.com/ar-es"
   },
   {
+    img: `${process.env.PUBLIC_URL}/ibm.png`,
     title: "IBM",
     description: "Application Developer",
     date: "Mar 2024 - In progress",
@@ -189,6 +188,13 @@ function ProjectRing() {
               onClick={() => window.open(project.web, "_blank")}
               style={{ cursor: "pointer" }}
             >
+              <img
+                src={project.img}
+                alt="project logo"
+                width={100}
+                height={100}
+                style={{ marginBottom: "10px" }}
+              />
               <h3>{project.title}</h3>
               <h4>{project.description}</h4>
               <p>{project.date}</p><br />
@@ -229,10 +235,10 @@ export default function Projects3D() {
         <ProjectRing />
         <OrbitControls
           enableZoom={false}
-          enablePan={true}
-          enableRotate={true}
+          enablePan
+          enableRotate
           rotateSpeed={0.4}
-          enableDamping={true}
+          enableDamping
           dampingFactor={0.25}
           screenSpacePanning={false}
           maxPolarAngle={Math.PI / 2}

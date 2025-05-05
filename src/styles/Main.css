@@ -216,7 +216,56 @@ body {
   transform: scale(1.05);
 }
 
-  
+/* Experience */
+.experience-section {
+  padding: 4rem 2rem;
+  background-color: #1b1b1b;
+}
+
+.experience-title {
+  text-align: center;
+  color: #00ffff;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.experience-card {
+  background-color: #2a2a2a;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.experience-role {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00ffff;
+}
+
+.experience-company {
+  font-size: 1rem;
+  color: #cccccc;
+  margin: 0.2rem 0 0.5rem;
+}
+
+.experience-duration {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 1rem;
+}
+
+.experience-description {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
 /* Skills */
 .skills-section {
   padding: 4rem 2rem;
@@ -401,7 +450,6 @@ footer {
   color: #aaa;
 }
 
-/* Responsive */
 @media (min-width: 768px) {
   .about-container {
     flex-direction: row;
@@ -419,5 +467,50 @@ footer {
 
   .about-text {
     flex: 2;
+  }
+
+  /* NUEVO: achicar el canvas y la sección hero */
+  .hero-3d {
+    height: 400px; /* más chico que en mobile */
+  }
+
+  .hero-3d canvas {
+    height: 100% !important;
+  }
+
+  /* Reducir textos en hero */
+  .overlay h1,
+  .overlay .custom-class {
+    font-size: 2rem; /* más pequeño que en mobile */
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .scroll-down {
+    font-size: 0.9rem;
+  }
+
+  .scroll-button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  /* Reducir tamaño de .project-card */
+  .project-card {
+    transform: scale(0.85); /* escala más pequeña */
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+  }
+
+  .project-card h4 {
+    font-size: 0.85rem;
+  }
+
+  .project-card p {
+    font-size: 0.75rem;
   }
 }
