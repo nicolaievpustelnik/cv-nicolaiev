@@ -2,9 +2,9 @@ import SplashCursor from './SplashCursor/SplashCursor';
 
 export default function About() {
   return (
-    <section id="about" className="about-section" style={{ position: 'relative', overflow: 'hidden' }}>
-  <SplashCursor />
-  <div className="about-container">
+    <section id="about" className="about-section">
+        <SplashCursor />
+        <div className="about-container">
         <div className="about-image">
           <img src={`${process.env.PUBLIC_URL}/img.jpeg`} alt="Foto de Nicolaiev" />
           <h3 className="about-name">Nicolaiev Brito Pustelnik</h3>
@@ -28,12 +28,12 @@ export default function About() {
           <div className="certificates">
             <h3 className="certificates-title">Certificates</h3>
             <div className="certificates-gallery">
-            <a href="https://aws.amazon.com/es/certification/certified-cloud-practitioner/" target="_blank" rel="noopener noreferrer">
-              <img src={`${process.env.PUBLIC_URL}/aws.png`} alt="Certificate 1" className="certificate-img" />
-            </a>
-            <a href="https://www.ibm.com/training/certification/ibm-certified-watsonx-generative-ai-engineer-associate-C9007000" target="_blank" rel="noopener noreferrer">
-              <img src={`${process.env.PUBLIC_URL}/ibm-ai.png`} alt="Certificate 2" className="certificate-img" />
-            </a>
+              <a href="https://aws.amazon.com/es/certification/certified-cloud-practitioner/" target="_blank" rel="noopener noreferrer">
+                <img src={`${process.env.PUBLIC_URL}/aws.png`} alt="Certificate 1" className="certificate-img" />
+              </a>
+              <a href="https://www.ibm.com/training/certification/ibm-certified-watsonx-generative-ai-engineer-associate-C9007000" target="_blank" rel="noopener noreferrer">
+                <img src={`${process.env.PUBLIC_URL}/ibm-ai.png`} alt="Certificate 2" className="certificate-img" />
+              </a>
             </div>
           </div>
         </div>

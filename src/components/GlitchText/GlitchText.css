@@ -76,3 +76,64 @@
   95%  { clip-path: inset(25% 0 35% 0); }
   100% { clip-path: inset(30% 0 40% 0); }
 }
+
+
+@media (max-width: 1700px) {
+  .glitch:not(.enable-on-hover)::after {
+    left: 5px;
+  }
+  .glitch:not(.enable-on-hover)::before {
+    left: -5px;
+  }
+  .glitch.enable-on-hover:hover::after {
+    left: 5px;
+  }
+  .glitch.enable-on-hover:hover::before {
+    left: -5px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .glitch:not(.enable-on-hover)::after {
+    left: 60px;
+  }
+  .glitch:not(.enable-on-hover)::before {
+    left: 60px;
+  }
+  .glitch.enable-on-hover:hover::after {
+    left: 60px;
+  }
+  .glitch.enable-on-hover:hover::before {
+    left: 60px;
+  }
+}
+
+@media (max-width: 650px) {
+  .glitch:not(.enable-on-hover)::after {
+    left: 30px;
+  }
+  .glitch:not(.enable-on-hover)::before {
+    left: 30px;
+  }
+  .glitch.enable-on-hover:hover::after {
+    left: 30px;
+  }
+  .glitch.enable-on-hover:hover::before {
+    left: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .glitch:not(.enable-on-hover)::after {
+    left: 0px;
+  }
+  .glitch:not(.enable-on-hover)::before {
+    left: 0px;
+  }
+  .glitch.enable-on-hover:hover::after {
+    left: 0px;
+  }
+  .glitch.enable-on-hover:hover::before {
+    left: 0px;
+  }
+}

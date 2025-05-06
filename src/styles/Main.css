@@ -7,33 +7,47 @@ body {
 }
 
 /* Navbar */
-.navbar {
-  background: #1e1e1e;
-  padding: 1rem;
-  position: sticky;
+.bm-burger-button {
+  position: fixed;
+  width: 30px;
+  height: 20px;
+  right: 30px;
+  top: 25px;
+}
+
+.bm-burger-bars {
+  background: #fff;
+}
+
+.bm-menu {
+  background: #000;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-menu-wrap {
   top: 0;
-  z-index: 10;
+  height: 100%;
 }
 
-.navbar ul {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar a {
+.bm-item {
+  display: inline-block;
   color: #fff;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  margin-bottom: 1rem;
+  transition: color 0.2s;
 }
 
-.navbar a:hover {
+.bm-item:hover {
   color: #00ffff;
 }
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+
+
 
 /* 3D Home */
 .hero-3d {
@@ -42,6 +56,7 @@ body {
   position: relative;
   overflow: hidden;
   padding: 0; 
+  padding-top: 70px;
 }
 
 .hero-3d canvas {
@@ -129,6 +144,8 @@ body {
   background-color: #4d4d4d1f;
   display: flex;
   justify-content: center;
+  position: 'relative';
+  overflow: 'hidden' 
 }
 
 .splash-wrapper {
@@ -216,56 +233,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Experience */
-.experience-section {
-  padding: 4rem 2rem;
-  background-color: #1b1b1b;
-}
-
-.experience-title {
-  text-align: center;
-  color: #00ffff;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-}
-
-.experience-card {
-  background-color: #2a2a2a;
-  padding: 2rem;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.experience-card:hover {
-  transform: translateY(-5px);
-}
-
-.experience-role {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #00ffff;
-}
-
-.experience-company {
-  font-size: 1rem;
-  color: #cccccc;
-  margin: 0.2rem 0 0.5rem;
-}
-
-.experience-duration {
-  font-size: 0.9rem;
-  color: #999;
-  margin-bottom: 1rem;
-}
-
-.experience-description {
-  font-size: 1rem;
-  color: #ddd;
-  line-height: 1.5;
-}
-
+  
 /* Skills */
 .skills-section {
   padding: 4rem 2rem;
@@ -450,6 +418,7 @@ footer {
   color: #aaa;
 }
 
+/* Responsive */
 @media (min-width: 768px) {
   .about-container {
     flex-direction: row;
@@ -468,49 +437,110 @@ footer {
   .about-text {
     flex: 2;
   }
+}
 
-  /* NUEVO: achicar el canvas y la sección hero */
+@media (max-width: 1024px) {
   .hero-3d {
-    height: 400px; /* más chico que en mobile */
+    font-size: 2.5rem;
   }
 
-  .hero-3d canvas {
-    height: 100% !important;
+  .hero-3d h1 {
+    font-size: 3rem;
   }
 
-  /* Reducir textos en hero */
-  .overlay h1,
-  .overlay .custom-class {
-    font-size: 2rem; /* más pequeño que en mobile */
+  .hero-3d p {
+    font-size: 1.25rem;
+  }
+}
+
+/* Ajustes para tablets pequeñas y móviles grandes (≤ 768px) */
+@media (max-width: 768px) {
+  .hero-3d {
+    font-size: 2rem;
   }
 
-  .hero-subtitle {
-    font-size: 1rem;
+  .hero-3d h1 {
+    font-size: 2.5rem;
   }
 
+  .hero-3d p {
+    font-size: 1.1rem;
+  }
+  
   .scroll-down {
-    font-size: 0.9rem;
-  }
-
-  .scroll-button {
-    font-size: 0.9rem;
-    padding: 6px 12px;
-  }
-
-  /* Reducir tamaño de .project-card */
-  .project-card {
-    transform: scale(0.85); /* escala más pequeña */
-  }
-
-  .project-card h3 {
     font-size: 1rem;
   }
 
-  .project-card h4 {
-    font-size: 0.85rem;
+  .arrow-icon-home {
+    font-size: 1.5rem;
+  }
+  
+}
+
+@media (max-width: 650px) {
+  .scroll-down {
+    width: 100%;
+  }
+}
+
+/* Ajustes para móviles (≤ 480px) */
+@media (max-width: 480px) {
+  /* HERO3D */
+  .hero-3d {
+    font-size: 1.5rem;
+    margin-top: 0;
+    max-height: 600px; 
+  }
+  .hero-3d h1 {
+    font-size: 2rem;
+  }
+  .hero-3d p {
+    font-size: 1rem;
   }
 
-  .project-card p {
-    font-size: 0.75rem;
+  /* ABOUT */
+  .about-image img{
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+  }
+  .about-title{
+    font-size: 1.5rem;
+  }
+  .about-title{
+    margin: 0 0 0 0;
+  }
+  .about-text p{
+    margin-left: 0;
+  }
+  .certificates-title{
+    margin-left: 0;
+  }
+  .certificates-gallery{
+    justify-content: center;
+    margin-left: -10px;
+  }
+
+  /* SKILLS */
+  .skills-title{
+    font-size: 1.5rem;
+  }
+  .skills-block{
+    margin: 0;
+    padding: 0;
+  }
+  .skills-category{
+    font-size: 1.1rem;
+  }
+  .skill-item{
+    font-size: 1rem;
+  }
+
+  /* PROJECTS */
+  .project-title{
+    font-size: 1.5rem;
+  }
+  .project-effect{
+    font-size: 1.1rem;
   }
 }
