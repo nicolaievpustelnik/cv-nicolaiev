@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cv-nicolaiev/static/css/main.b03f3514.css",
-    "main.js": "/cv-nicolaiev/static/js/main.2cb9fe7c.js",
+    "main.css": "/cv-nicolaiev/static/css/main.f3c502c9.css",
+    "main.js": "/cv-nicolaiev/static/js/main.7e01dac8.js",
     "static/media/inter-latin-ext-400-normal.woff": "/cv-nicolaiev/static/media/inter-latin-ext-400-normal.1c20f7dc20d731a18fcd.woff",
     "static/media/inter-latin-400-normal.woff": "/cv-nicolaiev/static/media/inter-latin-400-normal.b0c8fe9db56dd415a25a.woff",
     "static/media/inter-latin-ext-400-normal.woff2": "/cv-nicolaiev/static/media/inter-latin-ext-400-normal.3d10c85fbd16969509a2.woff2",
@@ -18,11 +18,11 @@
     "static/media/inter-greek-ext-400-normal.woff2": "/cv-nicolaiev/static/media/inter-greek-ext-400-normal.f2fa0d9ef98f59d4a75b.woff2",
     "static/media/inter-vietnamese-400-normal.woff2": "/cv-nicolaiev/static/media/inter-vietnamese-400-normal.44c9df135eec470b0ab6.woff2",
     "index.html": "/cv-nicolaiev/index.html",
-    "main.b03f3514.css.map": "/cv-nicolaiev/static/css/main.b03f3514.css.map",
-    "main.2cb9fe7c.js.map": "/cv-nicolaiev/static/js/main.2cb9fe7c.js.map"
+    "main.f3c502c9.css.map": "/cv-nicolaiev/static/css/main.f3c502c9.css.map",
+    "main.7e01dac8.js.map": "/cv-nicolaiev/static/js/main.7e01dac8.js.map"
   },
   "entrypoints": [
-    "static/css/main.b03f3514.css",
-    "static/js/main.2cb9fe7c.js"
+    "static/css/main.f3c502c9.css",
+    "static/js/main.7e01dac8.js"
   ]
 }
