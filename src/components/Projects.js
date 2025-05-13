@@ -215,9 +215,8 @@ export default function Projects3D() {
       <h2 className="project-title">Projects & Experience</h2>
       <div className="project-effect"> Use Effect <span className="arrow-icon">↔</span></div>
 
-      <Canvas
+      <Canvas 
         shadows
-        style={{ height: "700px", background: "#111" }}
         camera={{ position: [0, 2.5, 7], fov: 50 }}
       >
         <ambientLight intensity={0.3} />

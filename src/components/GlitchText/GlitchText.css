@@ -95,10 +95,10 @@
 
 @media (max-width: 1500px) {
   .glitch:not(.enable-on-hover)::after {
-    left: 60px;
+    left: 30px;
   }
   .glitch:not(.enable-on-hover)::before {
-    left: 60px;
+    left: 30px;
   }
   .glitch.enable-on-hover:hover::after {
     left: 60px;
