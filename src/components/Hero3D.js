@@ -5,15 +5,29 @@ import GlitchText from './GlitchText/GlitchText';
 
 export default function Hero3D() {
   const [visible, setVisible] = useState(false);
+  const [showCanvas, setShowCanvas] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
+  // Detectar móvil
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // Podés ajustar el umbral si querés
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Mostrar canvas solo si está en viewport (parte superior)
   useEffect(() => {
     const onScroll = () => {
       const offset = window.scrollY;
-      if (offset < 100) setVisible(true);
-      else setVisible(false);
+      setVisible(offset < 100);
+      setShowCanvas(offset < 100); // Monta o desmonta el canvas
     };
 
     window.addEventListener('scroll', onScroll);
+    onScroll(); // Ejecutar una vez al montar
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
@@ -24,28 +38,33 @@ export default function Hero3D() {
 
   return (
     <section className="hero-3d" id="hero">
-      <Canvas camera={{ position: [0, 0, 680], fov: 80 }}>
-        <ambientLight />
-        <pointLight position={[10, 10, 10]} />
-        <Stars 
-          radius={300} 
-          depth={60} 
-          count={20000} 
-          factor={7} 
-          saturation={0} 
-        />
-        <OrbitControls
-          autoRotate
-          enableZoom={true}
-          enablePan={true}
-          enableRotate={true}
-          zoomSpeed={0.6}
-          panSpeed={0.5}
-          rotateSpeed={0.4}
-          minDistance={50}
-          maxDistance={1300}
-        />
-      </Canvas>
+      {showCanvas && (
+        <Canvas
+          camera={{ position: [0, 0, isMobile ? 900 : 680], fov: 80 }}
+          dpr={isMobile ? 0.75 : 1.5}
+        >
+          <ambientLight />
+          <pointLight position={[10, 10, 10]} />
+          <Stars 
+            radius={200} 
+            depth={isMobile ? 20 : 60} 
+            count={isMobile ? 5000 : 20000} 
+            factor={isMobile ? 2 : 7}
+            saturation={0} 
+          />
+          <OrbitControls
+            autoRotate={!isMobile}
+            enableZoom={!isMobile}
+            enablePan={!isMobile}
+            enableRotate={!isMobile}
+            zoomSpeed={0.6}
+            panSpeed={0.5}
+            rotateSpeed={0.4}
+            minDistance={50}
+            maxDistance={1300}
+          />
+        </Canvas>
+      )}
 
       <div className={`overlay ${visible ? 'fade-in' : ''}`}>
         <GlitchText
@@ -57,7 +76,9 @@ export default function Hero3D() {
           Nicolaiev.Dev
         </GlitchText>
         <p className="hero-subtitle">Software Developer | Back-End & Architecture</p>
-        <div className="scroll-down"> Scroll Effect <span className="arrow-icon-home">↕</span> or <span className="arrow-icon-home">↔</span></div>
+        <div className="scroll-down">
+          Scroll Effect <span className="arrow-icon-home">↕</span> or <span className="arrow-icon-home">↔</span>
+        </div>
         <button className="scroll-button" onClick={scrollToSection}>
           More info
         </button>
