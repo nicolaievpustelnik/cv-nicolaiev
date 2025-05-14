@@ -76,9 +76,11 @@ export default function Hero3D() {
           Nicolaiev.Dev
         </GlitchText>
         <p className="hero-subtitle">Software Developer | Back-End & Architecture</p>
-        <div className="scroll-down">
-          Scroll Effect <span className="arrow-icon-home">↕</span> or <span className="arrow-icon-home">↔</span>
-        </div>
+        {!isMobile && (
+          <div className="scroll-down">
+            Scroll Effect <span className="arrow-icon-home">↕</span> or <span className="arrow-icon-home">↔</span>
+          </div>
+        )}
         <button className="scroll-button" onClick={scrollToSection}>
           More info
         </button>

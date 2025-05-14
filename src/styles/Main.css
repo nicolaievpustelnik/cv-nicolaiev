@@ -316,7 +316,7 @@ body {
 } 
 
 /* Project */
-#section canvas{
+#projects canvas{
   height: 100vh;
   max-height: 700px;
   background: #111;
@@ -509,6 +509,12 @@ footer {
   }
   .hero-3d p {
     font-size: 1.1rem;
+  }
+  .scroll-down {
+    display: none;
+  }
+  .scroll-button{
+    margin-top: 20px;
   }
   
   .scroll-down {

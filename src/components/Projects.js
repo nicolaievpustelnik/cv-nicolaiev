@@ -290,7 +290,17 @@ export default function Projects3D() {
         <RocketModel />
         <FireEffect />
         <ProjectRing />
-        <OrbitControls enableZoom={false} />
+        <OrbitControls
+          enableZoom={false}
+          enablePan
+          enableRotate
+          rotateSpeed={0.4}
+          enableDamping
+          dampingFactor={0.25}
+          screenSpacePanning={false}
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        />
       </Canvas>
     </section>
   );
