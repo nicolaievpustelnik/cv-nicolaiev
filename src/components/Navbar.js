@@ -5,23 +5,17 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const closeMenu = () => setIsOpen(false);
 
-  const links = (
-    <>
-      <a className="menu-item" href="#hero" onClick={closeMenu}>Home</a>
-      <a className="menu-item" href="#about" onClick={closeMenu}>About Me</a>
-      <a className="menu-item" href="#skills" onClick={closeMenu}>Skills</a>
-      <a className="menu-item" href="#projects" onClick={closeMenu}>Projects</a>
-      <a className="menu-item" href="#contact" onClick={closeMenu}>Contact</a>
-    </>
-  );
-
   return (
     <nav className="navbar">
       {/* Menú solo en móviles */}
       <div className="mobile-menu-wrapper">
-        <Menu right isOpen={isOpen} onStateChange={({ isOpen }) => setIsOpen(isOpen)}>
-          {links}
-        </Menu>
+      <Menu right isOpen={isOpen} onStateChange={({ isOpen }) => setIsOpen(isOpen)}>
+        <a className="menu-item" href="#hero" onClick={closeMenu}>Home</a>
+        <a className="menu-item" href="#about" onClick={closeMenu}>About Me</a>
+        <a className="menu-item" href="#skills" onClick={closeMenu}>Skills</a>
+        <a className="menu-item" href="#projects" onClick={closeMenu}>Projects</a>
+        <a className="menu-item" href="#contact" onClick={closeMenu}>Contact</a>
+      </Menu>
       </div>
 
       {/* Menú horizontal para desktop */}

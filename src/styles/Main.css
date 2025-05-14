@@ -534,6 +534,10 @@ footer {
 
 /* Ajustes para móviles (≤ 480px) */
 @media (max-width: 480px) {
+  .navbar {
+    padding: 2rem;
+  }
+  
   /* HERO3D */
   .hero-3d {
     font-size: 1.5rem;
